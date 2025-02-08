@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account | RZA</title>
+    <link rel="stylesheet" href="account.css">
+    <script src="https://kit.fontawesome.com/091a4d3e26.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--Nav Bar Section-->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+        
+           <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="about-us.html" class="navbar__links">About us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="bookings.html" class="navbar__links">Bookings</i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="educational-visits.html" class="navbar__links">Educational-visits</a>
+            </li>
+            <li class="navbar__item">
+                <a href="account-choice.html" class="navbar__links">Registration</a>
+            </li>
+            <li class="navbar__item">
+                <a href="account.html" class="navbar__links"><i class="fa-regular fa-user"></i></a>
+            </li>
+            
+        </ul>
+        </div>
+        <a href="index.html" id="navbar__logo">
+            <img src="RZA logo final.png" id="fixed"/>
+    </nav>
+
+
+<!--Hero Section-->
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1></h1>
+            <h2>Your Account</h2>
+            <h3>Step into the atmosphere of your favourite wildlife.</h3>
+            <p>See what makes us different.</p>
+            <button class="main__btn"><a href="#">Check out rewards!</a></button>
+        <div class="main__img"></div>
+        </div>
+    </div>
+</div>
+
+<!--USER PROFILE SECTION-->
+
+<div class="form-container">
+    <form action="" id="profileForm">
+        <div class="column-left">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+
+            <div class="column-right">
+                <label for="photo">Profile Picture:</label>
+                <input type="file" name="photo" id="photo" onchange="displayProfilePic()">
+                <img src="#" alt="Profile Picture" style="display:
+                none;" id="profilePic">
+            </div>
+    </form>
+</div>
+
+<!--FOOTER SECTION CSS-->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Services and Information</h2>
+                <a href="/">Contact Us</a>
+                <a href="/">Help Center</a>
+                <a href="/">Memberships</a>
+                <a href="/">Accessibility</a>
+                <a href="/">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="index.html" id="footer__logo">RZA</a>
+            </div>
+            <p class="website__rights">©RZA 2024. All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function displayProfilePic(){
+        const input = document.getElementById('photo');
+        const img = document.getElementById('profilePic');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                img.src = e.target.result;
+                img.style.display = 'block';
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function submitForm(){
+        const formData = new FormData(document.getElementById('profileForm'));
+
+        for (const pair of formData.entries()){
+            console.log(pair[0] + ': ' + pair[0]);
+        }
+    }
+</script>
+
+
+    
+</body>
+</html>

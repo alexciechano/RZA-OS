@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | RZA</title>
+    <link rel="stylesheet" href="bookings.css">
+    <script src="https://kit.fontawesome.com/091a4d3e26.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--Nav Bar Section-->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+        
+           <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="about-us.html" class="navbar__links">About us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="bookings.html" class="navbar__links">Bookings</i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="educational-visits.html" class="navbar__links">Educational-visits</a>
+            </li>
+            <li class="navbar__item">
+                <a href="account-choice.html" class="navbar__links">Registration</a>
+            </li>
+            <li class="navbar__item">
+                <a href="account.html" class="navbar__links"><i class="fa-regular fa-user"></i></a>
+            </li>
+            
+        </ul>
+        </div>
+        <a href="index.html" id="navbar__logo">
+            <img src="RZA logo final.png" id="fixed"/>
+    </nav>
+
+
+<!--Hero Section-->
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Book now with</h1>
+            <h2>Riget Zoo Adventures!</h2>
+            <h3>Experience a world of wildlife with Riget Zoo Adventures.</h3>
+            <p>Not got an account yet?</p>
+            <button class="main__btn"><a href="account-choice.html">No account?</a></button>
+        <div class="main__img"></div>
+        </div>
+    </div>
+</div>
+
+<!--SERVICES SECTION-->
+<div class="services" id="services">
+    <h1><i class="fa-solid fa-arrow-down-long"></i> Your Adventure Awaits <i class="fa-solid fa-arrow-down-long"></i></h1>
+    <div class="services__container">
+        <div class="services__card">
+            <h2></h2>
+            <p> </p>
+            <a href="#hotel-booking"><button>Hotel</button></a>
+        </div>
+        <div class="services__card">
+            <h2></h2>
+            <p> </p>
+            <a href="#ticket-booking"><button>Ticket</button></a>
+        </div>
+        <div class="services__card">
+            <h2></h2>
+            <p></p>
+            <a href="#educational-booking"><button>Educational Visit</button></a>
+        </div>
+    </div>
+</div>
+
+<!--HOTEL BOOKING-->
+
+<div class="background">
+    <div class="booking-form" id="hotel-booking">
+        <h2>Hotel Booking</h2>
+        <form action="bookings.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="room">Room type:</label>
+            <input type="hidden" name="room" id="room" required>
+            <select id="room">
+                <option value="blank"></option>
+                <option value="Single">Single room</option>
+                <option value="Double">Double room</option>
+                <option value="Family">Family room</option>
+            </select>
+
+            <label for="people">No. of People:</label>
+            <input type="number" name="people" id="people">
+
+            <label for="date-from">Date From:</label>
+            <input type="date" name="date-from" id="date-from" required>
+
+            <label for="date-to">Date To:</label>
+            <input type="date" name="date-to" id="date-to" required>
+        
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</div>
+
+
+<!--TICKET BOOKING-->
+
+<div class="background">
+    <div class="ticket-form" id="ticket-booking">
+        <h2>Ticket Booking</h2>
+        <form action="booking-tickets.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="ticket">Ticket type:</label>
+            <input type="hidden" name="ticket" id="ticket" required>
+            <select id="ticket-type">
+                <option value="blank"></option>
+                <option value="Child">Child Ticket</option>
+                <option value="Adult">Adult Ticket</option>
+                <option value="Group">Group Ticket</option>
+                <option value="Elderly">Elderly Ticket</option>
+            </select>
+
+            <label for="people">No. of People:</label>
+            <input type="number" name="people" id="people">
+
+            <label for="date">Date of Visit:</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="coupons">Member coupons:</label>
+            <input type="text" name="coupons" id="coupons">
+        
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</div>
+
+
+<!--EDUCATIONAL VISITS BOOKING-->
+
+<div class="background">
+    <div class="educational-form" id="educational-booking">
+        <h2>Educational Visit Booking</h2>
+        <form action="">
+            <label for="name">Name of trip Leader:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email of trip Leader:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="name">School name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="address">School Address:</label>
+            <input type="text" name="address" id="address" required>
+
+            <label for="email">School Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="no. adult">No. of Adults:</label>
+            <input type="number" name="no. adult" id="no.adult">
+
+            <label for="no. children">No. of Children:</label>
+            <input type="number" name="no. children" id="no.children">
+
+            <label for="start-date">Date of Visit:</label>
+            <input type="date" name="start-date" id="start-date" required>
+        
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!--FOOTER SECTION CSS-->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Services and Information</h2>
+                <a href="/">Contact Us</a>
+                <a href="/">Help Center</a>
+                <a href="/">Memberships</a>
+                <a href="/">Accessibility</a>
+                <a href="/">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="index.html" id="footer__logo">RZA</a>
+            </div>
+            <p class="website__rights">©RZA 2024. All rights reserved</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="/" class="social__icon--link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
